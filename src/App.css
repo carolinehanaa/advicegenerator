@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&family=Inter&family=Manrope:wght@700&display=swap');
+
+*{
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: hsl(218, 23%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card{
+  background: hsl(217, 19%, 24%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 540px;
+  padding-top: 3rem ;
+  padding-right: 2rem;
+  padding-bottom: 4.5rem;
+  padding-left: 2rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+
 }
 
-.App-link {
-  color: #61dafb;
+p{
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h2{
+  color: hsl(193, 38%, 86%);
+  margin-bottom: 2.5rem;
+  font-size: 28px;
+  text-align: center;
+}
+
+.dice{
+  background: hsl(150, 100%, 66%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: -2rem;
+}
+
+.dice:hover{
+  box-shadow: 0 0 40px 0 rgba(82, 225, 169, 1);
+  transition: .2s ease-in-out;
+
+}
+
+.divider-mobile{
+  display: none;
+  
+}
+
+@media(max-width: 924px){
+  .divider-mobile{
+    display: block;
+    
   }
-  to {
-    transform: rotate(360deg);
+
+  .divider-desktop{
+    display: none;
+  }
+}
+
+@media(max-width: 620px){
+  .card{
+    width: 90%;
+  }
+}
+
+@media(max-width: 320px){
+  h2{
+    font-size: 24px;
+  }
+
+  p{
+    font-size: 11px;
   }
 }
